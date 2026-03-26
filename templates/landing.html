@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learnova | Smart LMS</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <script defer src="{% static 'js/landing.js' %}"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Learnova</div>
+    <ul class="nav-links">
+        <li><a href="#features">Why Us</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#">Login</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Smart Learning Management System</h1>
+        <p>Manage classes, courses, attendance, and performance — all in one powerful platform.</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="features" id="features">
+    <h2>Why Choose Learnova?</h2>
+    <div class="feature-grid">
+        <div class="card">🎓 Role-Based Access</div>
+        <div class="card">📊 Real-Time Reports</div>
+        <div class="card">📚 Digital Learning</div>
+        <div class="card">🔐 Secure Platform</div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works" id="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">1️⃣ Admin sets up classes</div>
+        <div class="step">2️⃣ Teachers upload content</div>
+        <div class="step">3️⃣ Students learn & submit</div>
+        <div class="step">4️⃣ Parents track progress</div>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+    <h2>What Users Say</h2>
+    <div class="review-cards">
+        <div class="review">“Best LMS for schools!” – Teacher</div>
+        <div class="review">“Easy to track my child’s progress.” – Parent</div>
+        <div class="review">“All materials in one place.” – Student</div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Learnova LMS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

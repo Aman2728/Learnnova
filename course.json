@@ -1,0 +1,151 @@
+{
+  "info": {
+    "name": "Learnova LMS - Course APIs",
+    "_postman_id": "c1a9f123-4567-8901-xyz-course",
+    "description": "Course Module APIs Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "Create Course (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Python Full Stack\",\n  \"description\": \"Complete Python + Django + React\",\n  \"price\": 14999,\n  \"duration\": 90,\n  \"total_slots\": 50\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/course/create/",
+          "host": ["{{base_url}}"],
+          "path": ["course", "create", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Update Course",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 12999,\n  \"total_slots\": 60,\n  \"status\": \"active\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/course/1/update/",
+          "host": ["{{base_url}}"],
+          "path": ["course", "1", "update", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Delete Course",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/course/1/delete/",
+          "host": ["{{base_url}}"],
+          "path": ["course", "1", "delete", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Assign Teacher",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"teacher_id\": 3\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/course/1/assign-teacher/",
+          "host": ["{{base_url}}"],
+          "path": ["course", "1", "assign-teacher", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Assign Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": 5\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/course/1/assign-student/",
+          "host": ["{{base_url}}"],
+          "path": ["course", "1", "assign-student", ""]
+        }
+      }
+    },
+
+    {
+      "name": "List All Courses (Admin)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/courses/all/",
+          "host": ["{{base_url}}"],
+          "path": ["courses", "all", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Teacher Courses",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/courses/teacher/",
+          "host": ["{{base_url}}"],
+          "path": ["courses", "teacher", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Student Courses",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/courses/student/",
+          "host": ["{{base_url}}"],
+          "path": ["courses", "student", ""]
+        }
+      }
+    }
+
+  ]
+}
